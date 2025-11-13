@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Signup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Signup</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Full Name" required><br>
+      <input type="email" id="email" placeholder="Email" required><br>
+      <input type="password" id="password" placeholder="Password" required><br>
+      <input type="text" id="hostel" placeholder="Hostel Name" required><br>
+      <input type="number" id="year" placeholder="Year (e.g., 2)" required><br>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+
+  <script>document.getElementById('signupForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    password: document.getElementById('password').value,
+    hostel: document.getElementById('hostel').value,
+    year: document.getElementById('year').value
+  };
+  
+  const res = await fetch('http://localhost:3000/api/signup', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data)
+  });
+
+  const result = await res.json();
+  if (res.ok) alert('Signup successful!');
+  else alert(result.error);
+});</script>
+</body>
+</html>
