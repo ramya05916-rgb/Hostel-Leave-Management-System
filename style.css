@@ -1,0 +1,95 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* 🌈 Background split design */
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #cfe9ff 50%, #f8f9fa 50%);
+    }
+
+    /* 💎 Gradient border wrapper */
+    .card-border {
+      background: linear-gradient(135deg, #007bff, #00c6ff, #6a11cb, #2575fc);
+      padding: 3px; /* Border thickness */
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .card-border:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 🩵 Inner card */
+    .login-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px 35px;
+      width: 380px;
+      text-align: center;
+    }
+
+    .login-card h2 {
+      margin-bottom: 25px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    /* 🧾 Input fields */
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+    }
+
+    /* 💙 Button */
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #0056b3, #007bff);
+    }
+
+    /* 🔗 Sign-up text */
+    .signup {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .signup a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .signup a:hover {
+      text-decoration: underline;
+    }
